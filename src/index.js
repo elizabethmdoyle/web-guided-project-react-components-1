@@ -25,13 +25,27 @@ function App(props) {
   return (
     <div className='container'>
       <h1>Welcome to React, {props.track} rockstars!!</h1>
+      <h2>Instructor name: {props.name}, age: {props.age}</h2>
+      <h3>Are you happy? {props.happy}</h3>
     </div>
-   
   )
 }
 
 
 render(
-  <App track='Web' />,
+  <App track='Web' name="Elizabeth" age={33} happy="Yes" />,
   document.querySelector('#root')
 )
+
+/*  render() in JSX is the equivalent of doing the following in the background:
+
+const props: {
+  track: 'Web'.
+  name: Elizabeth,
+  age: 33
+
+}
+
+
+App(props)
+*/
